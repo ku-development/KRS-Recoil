@@ -1,10 +1,6 @@
 local playerPed = PlayerPedId()
 
-local weaponRecoilValues = {
-    [`weapon_pistol50`] = 3.5,
-    -- Add more weapons with their respective recoil values
-    -- [`new_weapon`] = new_recoil_value,
-}
+
 
 -- Simple "machine learning" model parameters
 local modelWeights = {
@@ -23,7 +19,7 @@ function ApplyRecoilBasedOnStateOrSpeed(ped, weapon, modifier)
     local pedSpeed = GetEntitySpeed(ped) * 1.5
 
     -- Simulating weapon recoil as a feature
-    local weaponRecoil = weaponRecoilValues[weapon] or 3.5
+    local weaponRecoil = Config.weaponRecoilValues[weapon] or 3.5
 
     -- Simulating "machine learning" model decision-making
     amplitude = CalculateAmplitudeScale(pedSpeed, 0.0, 150.0, 1.0, 8.0) * modelWeights.playerSpeedWeight
