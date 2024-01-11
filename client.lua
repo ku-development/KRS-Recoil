@@ -1,8 +1,7 @@
 local playerPed = PlayerPedId()
 
 local weaponRecoilValues = {
-    [`weapon_pistol50`] = 6.5,
-    [`weapon_mp7`] = 7.3,
+    [`weapon_pistol50`] = 3.5,
     -- Add more weapons with their respective recoil values
     -- [`new_weapon`] = new_recoil_value,
 }
